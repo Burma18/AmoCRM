@@ -57,10 +57,6 @@ const start = async () => {
 
 start();
 
-// this is the 2nd commit
-
-// this is another something
-
-// this one too
-
-// this is another comment
+// this is the 1st comment
+// this is the 2nd comment
+// this is the 3rd comment
