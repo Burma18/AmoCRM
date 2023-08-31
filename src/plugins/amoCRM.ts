@@ -21,13 +21,12 @@ interface tokenConvertType {
 const amoCRM = async (app: FastifyInstance) => {
   // ! config amoCRM
   const client_amoCRM = new Client({
-    domain: "https://burmawedevxco.kommo.com",
+    domain: process.env.AMOCRM_URL!,
     auth: {
-      client_id: "637ac1c5-2e20-41fe-942f-64e94ef1df2d",
-      client_secret:
-        "9MC6baLOk8YB8qMUo9rg3DIDpzWKl1QkYEbqmxan2mX1cgisWi0e4PPZO81mRnXd",
-      redirect_uri: "https://wedevx.co",
-      code: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgzYmFmZjViMjBmYjEyNThlYmI2NDU1YWJjNjE4MWFkMTc5MDJlMzk3OTYzNjhmN2EzNDdlMmY1MWNlNmUyYTc0MTMzZmI0YjRiZmMxYmY5In0.eyJhdWQiOiI2MzdhYzFjNS0yZTIwLTQxZmUtOTQyZi02NGU5NGVmMWRmMmQiLCJqdGkiOiI4M2JhZmY1YjIwZmIxMjU4ZWJiNjQ1NWFiYzYxODFhZDE3OTAyZTM5Nzk2MzY4ZjdhMzQ3ZTJmNTFjZTZlMmE3NDEzM2ZiNGI0YmZjMWJmOSIsImlhdCI6MTY5MzMxMzc5NCwibmJmIjoxNjkzMzEzNzk0LCJleHAiOjE2OTM0MDAxOTQsInN1YiI6IjEwMDI5MzgzIiwiZ3JhbnRfdHlwZSI6IiIsImFjY291bnRfaWQiOjMxNjQwNzg3LCJiYXNlX2RvbWFpbiI6ImtvbW1vLmNvbSIsInZlcnNpb24iOiJ2MiIsInNjb3BlcyI6WyJwdXNoX25vdGlmaWNhdGlvbnMiLCJmaWxlcyIsImNybSIsImZpbGVzX2RlbGV0ZSIsIm5vdGlmaWNhdGlvbnMiXX0.i9vrPDhNXy2bxUQI2jllVJKNMSu0xYm-hQAV7HLkT5hNHrudOLYWgdP6d3oeRabj2Wahi_oTE_VA1mgjkNrH5DZfZYSucMtvAtzH0RMR3kSqOuofnnmdkCW0usmOmyZAASklFEM-9zIDzh4a7DwWOlba_MwWBLJNo0zM28PY76aLWCKkPkO7lMPltOfRU50aLZPLyNlCh3dhrDbwDGrqyPSyhPsDT4srgIuehqWcOwNTnspM-xUOTJxL1KrCxuT9z29VJMDa43U4TyLS_bbPnoQzQECzO9QnxK42ltT2-kzs3diIIsfntrugvHxGmWAUqVTGm34V-z2cp0wsbTn6FQ",
+      client_id: process.env.AMOCRM_CLIENT_ID!,
+      client_secret: process.env.AMOCRM_CLIENT_SECRET!,
+      redirect_uri: process.env.AMOCRM_REDIRECT_URI!,
+      code: process.env.AMOCRM_CODE,
     },
   });
 
